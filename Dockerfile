@@ -7,7 +7,7 @@ WORKDIR /src
 COPY ["UmbracoElevate/UmbracoElevate.csproj", "."]
 RUN dotnet restore
 COPY . .
-RUN dotnet publish UmbracoDocker.sln --configuration Release --output /publish
+RUN dotnet publish UmbracoElevate.sln --configuration Release --output /publish
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 as runtime-env
